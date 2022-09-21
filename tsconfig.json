@@ -1,6 +1,18 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
+    "paths": {
+      "$assets/*": ["./src/assets/*"],
+      "$base/*": ["./src/components/base/*"],
+      "$lib/*": ["./src/lib/*"],
+      "$model/*": ["./src/models/*"],
+      "$services/*": ["./src/services/*"],
+      "$shared/*": ["./src/components/shared/*"],
+      "$style/*": ["./src/style/*"],
+    },
+    "watch": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
